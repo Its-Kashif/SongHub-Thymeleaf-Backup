@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CUSTOMER HOME</title>
+<link rel="stylesheet" href="/customerhome.css"/>
+</head>
+   <body>
+        
+
+  <div th:unless="${isPremium}" class="non-premium">
+        <form action="pay">
+          <input type="submit" value="GET PREMIUM" />
+        </form>
+        <form action="logout">
+          <input type="submit" value="LOGOUT" />
+        </form>
+      </div>
+      <div th:if="${isPremium}" class="premium">
+        <div class="song-grid">
+          <div th:each="song : ${songs}" class="song-card">
+            <div class="song-content">
+              <div class="song-details">
+                <h3 th:text="${song.name}">Song Name</h3>
+                <p th:text="${song.artist}">Artist Name</p>
+                <p th:text="${song.genre}">Genre</p>
+              </div>
+              <div class="audio-player">
+                <audio controls>
+                  <source th:src="${song.link}" type="audio/mpeg" />
+                </audio>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+@charset "ISO-8859-1";
+body {
+  font-family: Arial, sans-serif;
+  background-color: #000; /* Black background */
+  color: #fff; /* Text color white */
+}
+
+.song-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
+  width: 300px;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #333; /* Dark gray background */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card .song-info {
+  text-align: center;
+  color: #fff; /* White text */
+}
+
+.card .audio-controls {
+  margin-top: 20px;
+}
+
+.card audio {
+  width: 100%;
+}
+
+.card input[type="submit"] {
+  background-color: #000; /* Black button */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.card input[type="submit"]:hover {
+  background-color: #333; /* Darker gray on hover */
+}

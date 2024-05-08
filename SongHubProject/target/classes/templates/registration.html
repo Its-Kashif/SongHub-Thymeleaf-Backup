@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Registration-Form</title>
+<link rel="stylesheet" type="text/css" href="registration.css"/>
+</head>
+<body>
+    <form action="/register" method="post">
+        <h1>Registration Form</h1>
+        
+        <div class="input-container">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username">
+        </div>
+        
+        <div class="input-container">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email">
+        </div>
+        
+        <div class="input-container">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password">
+        </div>
+        
+        <div class="input-container">
+            <label for="phone-number">Phone no.</label>
+            <input type="text" id="phone_number" name="phone_number">
+        </div>
+        
+        <div class="input-container">
+            <label for="gender-info">Gender</label>
+            <div class="radio-container">
+                <input type="radio" value="male" name="gender" id="male">
+                <label for="male">Male</label>
+                
+                <input type="radio" value="female" name="gender" id="female">
+                <label for="female">Female</label>
+                
+                <input type="radio" value="other" name="gender" id="other">
+                <label for="other">Other</label>
+            </div>
+        </div>
+        
+        <div class="input-container">
+            <label for="user-info">Role</label>
+            <div class="radio-container">
+                <input type="radio" value="admin" name="role" id="admin">
+                <label for="admin">Admin</label>
+                
+                <input type="radio" value="customer" name="role" id="customer">
+                <label for="customer">Customer</label>
+            </div>
+        </div>
+        
+        <div class="input-container">
+            <label for="add-info">Address</label>
+            <textarea rows="5" cols="55" id="add-info" name="address"></textarea>
+        </div>
+        
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
